@@ -1,0 +1,130 @@
+/* google maps banner*/
+#map{
+	height: 500px;
+	width: 100%;
+	/*background-image: url('/static/images/google-maps.png');
+	background-size: cover;*/
+}
+/*google maps banner---*/
+
+
+/*filters container*/
+.filters{
+	background-color: #29333d;
+	padding: 40px 20px;
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+
+.filters .dropdown{
+	margin-right: 25px;
+}
+
+/* filters cont styles ---*/
+
+
+/*listing-cont styles*/
+.listings-cont{
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+/*listing cont styles---*/
+
+/*listin-card styles*/
+.listing-card{
+	width: 325px;
+	border: 1px solid lightgrey;
+	background-color: white;
+	margin: 20px 30px;
+	display: flex;
+	flex-direction: column;
+}
+
+.listing-card h3{
+	margin-bottom: 60px;
+	margin-top: 25px;
+}
+
+.top-portion{
+	padding: 7px 15px 10px 15px;
+	border-bottom: 1px solid lightgrey;
+	position: relative;
+}
+
+.people-to-feed-img{
+	width: 25px;
+	float: left;
+}
+
+.pickup-time-img{
+	width: 25px;
+	float: right;
+}
+
+.donor-img{
+	width: 75px;
+	height: 75px;
+	background-color: grey;
+	position: absolute;
+	top: 90%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	border: .5px solid lightgrey;
+}
+
+.top-portion span{
+	font-size: 13px;
+	color: black;
+	font-style: italic;
+	padding: 4px 8px;
+}
+
+.pickup-time{
+	float: right;
+}
+
+.food-description{
+	text-align: center;
+    font-size: 13px;
+    padding: 25px 20px;
+}
+
+
+.details-donor{
+	padding: 0px 20px 20px 20px;
+	margin-top: auto;
+}
+
+.post-time{
+	float: left;
+}
+
+.post-date{
+	float: right;
+}
+/*listing card styles*/
+
+/*mrdia queries*/
+@media only screen and (max-width : 475px){
+	.filters .dropdown{
+		margin-right: 0;
+	}
+
+	.filters{
+		flex-direction: column;
+	}
+}
+/*media queries --- */
+
+
+
+
+
+
+
+
+
+
+

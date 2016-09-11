@@ -1,0 +1,101 @@
+doctype html
+html
+  head
+    title Donate Food To The Poor
+    link(href='https://fonts.googleapis.com/css?family=Open+Sans:300', rel='stylesheet')
+    link(href='https://fonts.googleapis.com/css?family=Lobster', rel='stylesheet')
+    link(rel='stylesheet', type='text/css', href='/static/css/global.css')
+    link(rel='stylesheet', type='text/css', href='/static/css/index.css')
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js')
+    
+  body
+    .navbar
+      ul.navbar-links
+        a.logo-navbar(href='/')
+          li Bhojan-Daan
+      ul.navbar-links.right
+        if loggedInId
+          a(href='/user-dash/'+loggedInId, class='big-screen-links')
+            li.donor-img-navbar
+              if userpic
+                img(src='/static/images/bikaner-logo.jpeg')
+              else
+                img(src='/static/images/defaultpic.jpg')
+          a(href='/api/logout', class ='big-screen-links')
+            li Log Out
+        else
+          a.big-screen-links(href='/signup-login')
+            li Log In
+        a.big-screen-links(href='/become-a-donor')
+          li.special-link Become a Donor
+        img.navbar-icon(src='/static/images/menu.svg', onclick='openNav()')
+    div(id='map')
+    .filters
+      .dropdown
+        span(id= 'people-count-filter') People to Feed
+        img.dropdown-icon(src='/static/images/down-chevron.svg')
+        ul.dropdown-links
+          li  < 5 
+          li  5-10 
+          li  11-20 
+          li  > 20 
+      button.but.primary(id ='filterBut') Apply Filter
+    h1 Lisitings in Gurgaon
+    .listings-cont
+      each post in posts
+        .listing-card
+          .top-portion
+            span.post-time #{post.postTime}
+            span.post-date #{post.postDate}
+            h3 #{post.userName}
+            img.people-to-feed-img(src='/static/images/man.svg')
+            span.people-fed-count #{post.peopleFed}
+            if post.userpic
+              img.donor-img(src='/static/images/bikaner-logo.jpeg')
+            else
+              img.donor-img(src='/static/images/defaultpic.jpg')
+            img.pickup-time-img(src='/static/images/clock.svg')
+            span.pickup-time #{post.pickupTime}
+          p.food-description
+            | #{post.description}
+          .details-donor
+            p.contact
+              img(src='/static/images/calendar.svg')
+              |             Pick up by: #{post.pickupDate}
+            p(class = 'contact useradd')
+              img(src='/static/images/location-pin.svg')
+              |             #{post.userAddress}
+            p.contact
+              img(src='/static/images/phone-receiver.svg')
+              |             #{post.userContact}
+            a.link-but(href='/user-dash/#{post.userid}', class = 'see-user-profile') See Profile
+    .footer
+      .footer-col
+        h3 Contact
+        p
+          | 321 Lester St, Waterloo,
+          br
+          |  Ontario, CA - N2L 3G1
+        p +1(519)504-4603
+      .footer-col
+        a(href='/about') About
+        if !loggedInId
+          a.primary.but(href='/become-a-donor') Sign Up
+    .sidenav
+      a.closebtn(href='javascript:void(0)', onclick='closeNav()') ×
+      if loggedInId
+        a(href = '/user-dash/'+loggedInId)
+          if userpic
+            img(src = '/static/images/binaker-logo.jpg')
+          else
+            img(src = '/static/images/defaultpic.jpg')
+        a(href = '/user-settings/'+loggedInId) User Settings
+        a(href='/api/logout') Logout
+        a(href = '/') View all Listings
+      else
+        a(href='/signup-login') Login
+        a(href = '/') View all Listings
+  script(src='https://maps.googleapis.com/maps/api/js')
+  script(type='text/javascript', src='/static/js/main.js')
+  script(type='text/javascript', src='/static/js/index.js')
+  script(type='text/javascript', src='/static/js/googlemaps.js')

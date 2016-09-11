@@ -1,0 +1,142 @@
+doctype html
+html
+  head
+    title Manage your Posts
+    link(href='https://fonts.googleapis.com/css?family=Open+Sans:300', rel='stylesheet')
+    link(href='https://fonts.googleapis.com/css?family=Lobster', rel='stylesheet')
+    link(rel='stylesheet', type='text/css', href='/static/css/global.css')
+    link(rel='stylesheet', type='text/css', href='/static/css/posts.css')
+    link(rel='stylesheet', type='text/css', href='/plugin/reveal/reveal.css')
+    link(rel='stylesheet', type='text/css', href='/plugin/datepicker/dist/datepicker.css')
+    link(rel='stylesheet', ,='', href='//cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.css')
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js')
+  body
+    .navbar
+      ul.navbar-links
+        a.logo-navbar(href='/')
+          li Bhojan-Daan
+      ul.navbar-links.right
+        if loggedInId
+          a(href='/user-dash/'+loggedInId, class='big-screen-links')
+            li.donor-img-navbar
+              if userpic
+                img(src='/static/images/bikaner-logo.jpeg')
+              else
+                img(src='/static/images/defaultpic.jpg')
+          a(href='/api/logout', class ='big-screen-links')
+            li Log Out
+        else
+          a.big-screen-links(href='/signup-login')
+            li Log In
+        a.big-screen-links(href='/become-a-donor')
+          li.special-link Become a Donor
+        img.navbar-icon(src='/static/images/menu.svg', onclick='openNav()')
+    a(href = '/user-dash/'+'#{userid}')
+      h1 #{userName}'s Posts
+    .flex-cont
+      .posts
+        if posts.length > 0
+          h2 All Posts
+          each post in posts
+            .post
+              .post-details
+                span.post-time
+                  | Posted on #{post.postDate} at #{post.postTime}
+                span Active:
+                  if post.active
+                    img.active-post-img(src='/static/images/success.svg')
+                  else
+                    img.active-post-img(src='/static/images/error.svg')
+              label Description:
+              p.contact.description
+                |#{post.description}
+              p.contact.peopleFed
+                img(src='/static/images/man.svg')
+                |           #{post.peopleFed}
+              p.contact.pickupDate
+                img(src='/static/images/calendar.svg')
+                |    Pick up by:       #{post.pickupDate}
+              p.contact.pickupTime
+                img(src='/static/images/clock.svg')
+                |           #{post.pickupTime}
+              p.contact.address
+                img(src='/static/images/location-pin.svg')
+                | 					#{userAddress}
+              p.contact.contact
+                img(src='/static/images/phone-receiver.svg')
+                | 					#{userContact}
+              
+              if pageActive
+                span.user-actions
+                  a.edit(data-postid = '#{post._id}', data-reveal-id='editModal') Edit
+                  a.delete(data-postid = '#{post._id}') Delete
+        else
+          h1 No Posts To Show
+      .filters
+        .top-highlight
+          | Filter Posts
+        .filter-choices
+          .choice
+            | By Date
+            input(type='radio', name='filter')
+          .choice
+            | By Month
+            input(type='radio', name='filter')
+          .choice
+            | By Year
+            input(type='radio', name='filter')
+        img(src='/static/images/calendar.svg')
+        a.primary.but(href='') Apply Filter
+    .footer
+      .footer-col
+        h3 Contact
+        p
+          | 321 Lester St, Waterloo,
+          br
+          |  Ontario, CA - N2L 3G1
+        p +1(519)504-4603
+      .footer-col
+        a(href='/about') About
+        if !loggedInId
+          a.primary.but(href='/become-a-donor') Sign Up
+    
+    if pageActive
+      #editModal.reveal-modal
+        h2 Edit Post
+        label Description
+        textarea(id ='postDescription' maxlength = '225', placeholder ='Max 225 chracters...')
+        .pickup-details
+          span
+            | Pickup Date: 
+            input#date(type='text', readonly)
+          span.float-right
+            | Pickup Time: 
+            input#time(type='text', readonly)
+        span#active
+          | Active : 
+          input(type='checkbox', id='postActiveCheckbox')
+          span
+            |People To Feed: 
+            input(type = 'number', id='postPeopleToFeed')
+        a.link-but(id= 'updatePost') Update
+        a.close-reveal-modal ×
+
+    .sidenav
+      a.closebtn(href='javascript:void(0)', onclick='closeNav()') ×
+      if loggedInId
+        a(href = '/user-dash/'+loggedInId)
+          if userpic
+            img(src = '/static/images/binaker-logo.jpg')
+          else
+            img(src = '/static/images/defaultpic.jpg')
+        a(href='/api/logout') Logout
+        a(href = '/') View all Listings
+      else
+        a(href='/signup-login') Login
+        a(href = '/') View all Listings
+  script(type='text/javascript', src='/plugin/datepicker/dist/datepicker.js')
+  script(src='//cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.js')
+  script(type='text/javascript', src='/plugin/reveal/jquery.reveal.js')
+  script(type='text/javascript', src='/static/js/main.js')
+  script(type='text/javascript', src='/static/js/posts.js')
+  script(type='text/javascript', src='/static/js/date-time.js')

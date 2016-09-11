@@ -1,0 +1,21 @@
+{
+  "name": "bhojan-daan",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@fengyuanchen/datepicker": "github:fengyuanchen/datepicker",
+    "async": "^2.0.1",
+    "body-parser": "^1.15.2",
+    "cookie-session": "^2.0.0-alpha.1",
+    "express": "^4.14.0",
+    "jade": "^1.11.0",
+    "mongoose": "^4.5.10",
+    "sync": "^0.2.5"
+  }
+}

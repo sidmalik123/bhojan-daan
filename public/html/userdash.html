@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>User Dashboard</title>
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="/static/css/global.css">
+	<link rel="stylesheet" type="text/css" href="/static/css/userdash.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+</head>
+<body>
+	<div class = 'navbar'>
+		<ul class = 'navbar-links'>
+			<a href='#' class = 'logo-navbar'><li>Bhojan-Daan</li></a>
+		</ul>
+		<ul class ='navbar-links right'>
+			<a href='#' class = 'big-screen-links'><li>Log In</li></a>
+			<a href='/food' class = 'big-screen-links'><li class='special-link'>View all Listings</li></a>
+			<img src = '/static/images/menu.svg' class = 'navbar-icon'>
+		</ul>
+		
+	</div>
+
+	<div class = 'user-profile'>
+			<div class = 'user-card'>
+				<h2>Bikaner Wala</h2>
+				<img src = '/static/images/bikaner-logo.jpeg' class = 'donor-dp'>
+				<p class = 'contact'>
+					<img src = '/static/images/speech-bubble.svg'>
+					<span>Shoreditch aesthetic before they sold out beard cardigan neutra. Cornhole dreamcatcher truffaut, try-hard wayfarers cred asymmetrical franzen. Raw denim taxidermy bespoke williamsburg</span>
+				</p>
+				<p class = 'contact'>
+					<img src = '/static/images/location-pin.svg'>
+					Bikaner Wala, Sec-29, Gurgaon, Haryana
+				</p>
+				<p class = 'contact'>
+					<img src = '/static/images/phone-receiver.svg'>
+					0124-4046394
+				</p>
+				<span>
+					<a  href = '' class = 'add-menu'>View Menu</a>
+					<a href='' class = 'edit'>Edit</a>
+				</span>
+			</div>
+			<div class = 'manage'>
+				<div class = 'recent-posts'>
+					<h2>Recent Posts</h2>
+					<div class = 'post'>
+						<div class = 'post-details'>
+							<span class = 'post-time'>
+								Posted on 12/08/16 at 12:05pm
+							</span>
+							<span>Active:</span>
+							<img class='active-post-img' src= '/static/images/success.svg'>
+						</div>
+						<label>Description:</label>
+						<p class ='contact description'>
+							Try-hard cronut selvage, cred mustache 90's tacos slow-carb XOXO pork belly semiotics poutine green juice butcher paleo. Godard stumptown kitsch. Try-hard cronut selvage, cred mustache 90's.
+						</p>
+						<p class = 'contact'>
+							<img src = '/static/images/location-pin.svg'>
+							Bikaner Wala, Sec-29, Gurgaon 122002
+						</p>
+						<p class = 'contact'>
+							<img src = '/static/images/phone-receiver.svg'>
+							0124-4046394, 9911194425
+						</p>
+						<span class = 'user-actions'>
+							<a href = '' data-reveal-id='editModal'>Edit</a>
+							<a href = '' class='delete'>Delete</a>
+						</span>
+					</div>
+					
+				</div>
+				<div class="user-stats">
+					<div class = 'stat rank'>
+						<h2>Rank</h2>
+						<h1>9</h1>
+					</div>
+					<div class = 'stat total-people-fed'>
+						<h2>Total People Fed</h2>
+						<h1>128</h1>
+					</div>
+					<div class = 'stat total-donations'>
+						<h2>Total Donations</h2>
+						<h1>22</h1>
+						<a href = ''>Manage Donations</a>
+					</div>
+				</div>
+			</div>
+		
+	</div>
+
+	<div class = 'user-settings'>
+		<div class = 'top-division'>
+			Settings
+			<img src = '/static/images/down-settingarrow.svg'>
+		</div>
+		<div class = 'settings' data-open= 'false'>
+			<div class = 'change-password'>
+				<h3>Change Password</h3>
+				<label>Current Password:</label>
+				<input type="password" name="">
+				<label>New Password:</label>
+				<input type="password" name="">
+				<a class = 'link-but'>Update Password</a>
+			</div>
+			<div class ='del-account'>
+				<h3>Haven't been using your account or not liking Bhojan-Daan anymore?</h3>
+				<a class = 'link-but'>Delete Account</a>
+			</div>
+		</div>
+	</div>
+
+	<div class = 'footer'></div>
+
+
+
+</body>
+
+<script type="text/javascript">
+	
+</script>
+
+
+
+
+
+
+
+</html>

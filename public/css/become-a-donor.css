@@ -1,0 +1,108 @@
+/* signup banner styles*/
+.banner{
+	height: 500px;
+	background: 
+		linear-gradient(
+	      rgba(0, 0, 0, 0.2), 
+	      rgba(0, 0, 0, 0.2)
+	    ),
+	    url('/static/images/giving-food.jpg');
+	background-size: cover;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+}
+
+.banner h1,
+.banner h2,
+.banner button{
+	color: white;
+	margin: 0;
+	margin-bottom: 12px;
+
+}
+
+.banner h1{
+	font-size: 60px;
+	margin-top: -30px;
+}
+
+.banner a:hover{
+	padding: 15px 40px;
+}
+/* signup banner styles ---*/
+
+/*flex-cont how it works styles*/
+.flex-cont{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+/*flex-cont how it works styles*/
+
+
+/*how it works steps styles*/
+.work-step{
+	position: relative;
+	margin: 25px;
+}
+
+.circle-highlighter{
+	margin-top: 35px;
+	margin-left: 65px;
+	width: 200px;
+	height: 200px;
+	border-radius: 50%;
+	border: 2px dashed #14b0bc;
+}
+
+.work-icon{
+	width: 100px;
+	margin-top: 45px;
+	margin-left: 45px;
+}
+
+.work-icon:hover{
+	transition: 1.3s;
+	transform: rotate(360deg);
+}
+/*how it works steps styles ---*/
+
+
+
+
+
+/*media queries*/
+@media only screen and (min-width: 800px){
+	.link-alone{
+		display: none;
+	}
+
+	.total-fed{
+		display: inline;
+	}
+
+	.top5-item{
+		padding: 20px 15px;
+	}
+
+	.donor-name{
+		font-size: 22px;
+	}
+}
+/*media queries*/
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,108 @@
+{
+  "_args": [
+    [
+      {
+        "hosted": {
+          "directUrl": "https://raw.githubusercontent.com/fengyuanchen/datepicker/master/package.json",
+          "gitUrl": "git://github.com/fengyuanchen/datepicker.git",
+          "httpsUrl": "git+https://github.com/fengyuanchen/datepicker.git",
+          "shortcut": "github:fengyuanchen/datepicker",
+          "ssh": "git@github.com:fengyuanchen/datepicker.git",
+          "sshUrl": "git+ssh://git@github.com/fengyuanchen/datepicker.git",
+          "type": "github"
+        },
+        "name": null,
+        "raw": "fengyuanchen/datepicker",
+        "rawSpec": "fengyuanchen/datepicker",
+        "scope": null,
+        "spec": "github:fengyuanchen/datepicker",
+        "type": "hosted"
+      },
+      "/Users/sidmalik/Desktop/bhojan-daan"
+    ]
+  ],
+  "_from": "fengyuanchen/datepicker",
+  "_id": "@fengyuanchen/datepicker@0.3.1",
+  "_inCache": true,
+  "_installable": true,
+  "_location": "/@fengyuanchen/datepicker",
+  "_phantomChildren": {},
+  "_requested": {
+    "hosted": {
+      "directUrl": "https://raw.githubusercontent.com/fengyuanchen/datepicker/master/package.json",
+      "gitUrl": "git://github.com/fengyuanchen/datepicker.git",
+      "httpsUrl": "git+https://github.com/fengyuanchen/datepicker.git",
+      "shortcut": "github:fengyuanchen/datepicker",
+      "ssh": "git@github.com:fengyuanchen/datepicker.git",
+      "sshUrl": "git+ssh://git@github.com/fengyuanchen/datepicker.git",
+      "type": "github"
+    },
+    "name": null,
+    "raw": "fengyuanchen/datepicker",
+    "rawSpec": "fengyuanchen/datepicker",
+    "scope": null,
+    "spec": "github:fengyuanchen/datepicker",
+    "type": "hosted"
+  },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "git://github.com/fengyuanchen/datepicker.git#c41711a028ce7d719000c16fc0b1a72cae5d1d33",
+  "_shasum": "131ad0664e2fc0f49306f74195df840a983dbc55",
+  "_shrinkwrap": null,
+  "_spec": "fengyuanchen/datepicker",
+  "_where": "/Users/sidmalik/Desktop/bhojan-daan",
+  "author": {
+    "name": "Fengyuan Chen",
+    "url": "http://chenfengyuan.com"
+  },
+  "bugs": {
+    "url": "https://github.com/fengyuanchen/datepicker/issues"
+  },
+  "dependencies": {
+    "jquery": ">= 1.9.1"
+  },
+  "description": "A simple jQuery datepicker plugin.",
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-csscomb": "^3.0.6",
+    "gulp-csslint": "^0.2.0",
+    "gulp-htmlcomb": "0.1.0",
+    "gulp-jscs": "^3.0.2",
+    "gulp-jshint": "^1.12.0",
+    "gulp-load-plugins": "^1.2.0",
+    "gulp-minify-css": "^1.2.3",
+    "gulp-qunit": "^1.3.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-replace": "^0.5.4",
+    "gulp-sass": "^2.1.1",
+    "gulp-uglify": "^1.5.1"
+  },
+  "gitHead": "c41711a028ce7d719000c16fc0b1a72cae5d1d33",
+  "homepage": "https://github.com/fengyuanchen/datepicker",
+  "keywords": [
+    "date",
+    "picker",
+    "datepicker",
+    "jquery",
+    "plugin",
+    "html",
+    "css",
+    "javascript",
+    "front-end",
+    "web",
+    "development"
+  ],
+  "license": "MIT",
+  "main": "dist/datepicker.js",
+  "name": "@fengyuanchen/datepicker",
+  "optionalDependencies": {},
+  "readme": "# Datepicker\n\n> A simple jQuery datepicker plugin.\n\n- [Homepage](http://fengyuanchen.github.io/datepicker)\n\n\n\n## Table of contents\n\n  - [Features](#features)\n  - [Main](#main)\n  - [Getting started](#getting-started)\n  - [Options](#options)\n  - [Methods](#methods)\n  - [Events](#events)\n  - [I18n](#i18n)\n  - [No conflict](#no-conflict)\n  - [Browser support](#browser-support)\n  - [Versioning](#versioning)\n  - [License](#license)\n\n\n\n## Features\n\n- Supports [options](#options)\n- Supports [methods](#methods)\n- Supports [events](#events)\n- Supports inline mode\n- Supports touch (mobile)\n- Supports internationalization\n- Cross-browser support\n\n\n\n## Main\n\n```\ndist/\n├── datepicker.css     ( 4 KB)\n├── datepicker.min.css ( 4 KB)\n├── datepicker.js      (38 KB)\n└── datepicker.min.js  (15 KB)\n```\n\n\n\n## Getting started\n\n### Quick start\n\nThree quick start options are available:\n\n- [Download the latest release](https://github.com/fengyuanchen/datepicker/archive/master.zip).\n- Clone the repository: `git clone https://github.com/fengyuanchen/datepicker.git`.\n- Install with [NPM](http://npmjs.org): `npm install fengyuanchen/datepicker`.\n- Install with [Bower](http://bower.io): `bower install fengyuanchen/datepicker`.\n\n\n### Installation\n\nInclude files:\n\n```html\n<script src=\"/path/to/jquery.js\"></script><!-- jQuery is required -->\n<link  href=\"/path/to/datepicker.css\" rel=\"stylesheet\">\n<script src=\"/path/to/datepicker.js\"></script>\n```\n\n\n### Usage\n\nInitialize with `$.fn.datepicker` method.\n\n```html\n<input data-toggle=\"datepicker\">\n<textarea data-toggle=\"datepicker\"></textarea>\n<div data-toggle=\"datepicker\"></div>\n```\n\n```js\n$('[data-toggle=\"datepicker\"]').datepicker();\n```\n\n\n[⬆ back to top](#table-of-contents)\n\n\n\n## Options\n\nYou may set datepicker options with `$().datepicker(options)`.\nIf you want to change the global default options, You may use `$.fn.datepicker.setDefaults(options)`.\n\n\n### autoshow\n\n- Type: `Boolean`\n- Default: `false`\n\nShow the datepicker automatically when initialized.\n\n\n### autohide\n\n- Type: `Boolean`\n- Default: `false`\n\nHide the datepicker automatically when picked.\n\n\n### autopick\n\n- Type: `Boolean`\n- Default: `false`\n\nPick the initial date automatically when initialized.\n\n\n### inline\n\n- Type: `Boolean`\n- Default: `false`\n\nEnable inline mode.\n\nIf the element is not an input element, will append the datepicker to the element.\nIf the `container` option is set, will append the datepicker to the container.\n\n\n### container\n\n- Type: `Element` or `String`(selector)\n- Default: `null`\n\nA element for putting the datepicker. If not set, the datepicker will be appended to `document.body` by default.\n\n\n### trigger\n\n- Type: `Element` or `String`(selector)\n- Default: `null`\n\nA element for triggering the datepicker.\n\n\n### language\n\n- Type: `String`\n- Default: `''`\n\nThe ISO language code. If not set, will use the built-in language (en-US) by default.\n\n```js\n$().datepicker({\n  language: 'en-GB'\n});\n```\n\n\n### format\n\n- Type: `String`\n- Default: `'mm/dd/yyyy'`\n- Available date placeholders:\n  - Year: `yyyy`, `yy`\n  - Month: `mm`, `m`\n  - Day: `dd`, `d`\n\nThe date string format.\n\n```js\n$().datepicker({\n  format: 'yyyy-mm-dd'\n});\n```\n\n\n### date\n\n- Type: `Date` or `String`\n- Default: `null`\n\nThe initial date. If not set, will use the current date by default.\n\n```js\n$().datepicker({\n  date: new Date(2014, 1, 14) // Or '02/14/2014'\n});\n```\n\n\n### startDate\n\n- Type: `Date` or `String`\n- Default: `null`\n\nThe start view date. All the dates before this date will be disabled.\n\n\n### endDate\n\n- Type: `Date` or `String`\n- Default: `null`\n\nThe end view date. All the dates after this date will be disabled.\n\n\n### startView\n\n- Type: `Number`\n- Default: `0`\n- Options:\n  - `0`: days\n  - `1`: months\n  - `2`: years\n\nThe start view when initialized.\n\n\n### weekStart\n\n- Type: `Number`\n- Default: `0`\n- Options:\n  - `0`: Sunday\n  - `1`: Monday\n  - `2`: Tuesday\n  - `3`: Wednesday\n  - `4`: Thursday\n  - `5`: Friday\n  - `6`: Saturday\n\nThe start day of the week.\n\n\n### yearFirst\n\n- Type: `Boolean`\n- Default: `false`\n\nShow year before month on the datepicker header\n\n\n### yearSuffix\n\n- Type: `String`\n- Default: `''`\n\nA string suffix to the year number.\n\n```js\n$().datepicker({\n  yearSuffix: '年'\n});\n```\n\n### days\n\n- Type: `Array`\n- Default: `['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']`\n\nDays' name of the week.\n\n\n### daysShort\n\n- Type: `Array`\n- Default: `['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat']`\n\nShorter days' name.\n\n\n### daysMin\n\n- Type: `Array`\n- Default: `['Su', 'Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa']`\n\nShortest days' name.\n\n\n### months\n\n- Type: `Array`\n- Default: `['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']`\n\nMonths' name.\n\n\n### monthsShort\n\n- Type: `Array`\n- Default: `['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']`\n\nShorter months' name.\n\n\n### itemTag\n\n- Type: `String`\n- Default: `'li'`\n\nA element tag for each item of years, months and days.\n\n\n### mutedClass\n\n- Type: `String`\n- Default: `'muted'`\n\nA class (CSS) for muted item.\n\n\n### pickedClass\n\n- Type: `String`\n- Default: `'picked'`\n\nA class (CSS) for picked item.\n\n\n### disabledClass\n\n- Type: `String`\n- Default: `'disabled'`\n\nA class (CSS) for disabled item.\n\n\n### template\n\n- Type: `String`\n- Default:\n\n```html\n<div class=\"datepicker-container\">\n  <div class=\"datepicker-panel\" data-view=\"years picker\">\n    <ul>\n      <li data-view=\"years prev\">&lsaquo;</li>\n      <li data-view=\"years current\"></li>\n      <li data-view=\"years next\">&rsaquo;</li>\n    </ul>\n    <ul data-view=\"years\"></ul>\n  </div>\n  <div class=\"datepicker-panel\" data-view=\"months picker\">\n    <ul>\n      <li data-view=\"year prev\">&lsaquo;</li>\n      <li data-view=\"year current\"></li>\n      <li data-view=\"year next\">&rsaquo;</li>\n    </ul>\n    <ul data-view=\"months\"></ul>\n  </div>\n  <div class=\"datepicker-panel\" data-view=\"days picker\">\n    <ul>\n      <li data-view=\"month prev\">&lsaquo;</li>\n      <li data-view=\"month current\"></li>\n      <li data-view=\"month next\">&rsaquo;</li>\n    </ul>\n    <ul data-view=\"week\"></ul>\n    <ul data-view=\"days\"></ul>\n  </div>\n</div>\n```\n\nThe template of the datepicker.\n\n**Note:** All the `data-view` attributes must be set when you customize it.\n\n\n### offset\n\n- Type: `Number`\n- Default: `10`\n\nThe offset top or bottom of the datepicker from the element.\n\n\n### zIndex\n\n- Type: `Number`\n- Default: `1`\n\nThe CSS `z-index` style for the datepicker.\n\n\n### filter\n\n- Type: `Function`\n- Default: `null`\n\nFilter each date item. If return a `false` value, the related date will be disabled.\n\n```js\nvar now = Date.now();\n\n$().datepicker({\n  filter: function(date) {\n    if (date.getDay() === 0) {\n      return false; // Disable all Sundays\n    }\n  }\n});\n```\n\n\n### show\n\n- Type: `Function`\n- Default: `null`\n\nA shortcut of the \"show.datepicker\" event.\n\n\n### hide\n\n- Type: `Function`\n- Default: `null`\n\nA shortcut of the \"hide.datepicker\" event.\n\n\n### pick\n\n- Type: `Function`\n- Default: `null`\n\nA shortcut of the \"pick.datepicker\" event.\n\n\n[⬆ back to top](#table-of-contents)\n\n\n\n## Methods\n\nCommon usage:\n\n```js\n$().datepicker('method', argument1, , argument2, ..., argumentN);\n```\n\n\n### show()\n\nShow the datepicker.\n\n\n### hide()\n\nHide the datepicker.\n\n\n### update()\n\nUpdate the datepicker with the value or text of the current element.\n\n\n### pick()\n\nPick the current date to the element.\n\n\n### reset()\n\nReset the datepicker.\n\n\n### getMonthName([month[, short]])\n\n- **month** (optional):\n  - Type: `Number`\n  - Default: the month of the current date\n\n- **short** (optional):\n  - Type: `Boolean`\n  - Default: `false`\n  - Get the shorter month name\n\n- (return value):\n  - Type: `String`\n\nGet the month name with given argument or the current date.\n\n```js\n$().datepicker('getMonthName'); // 'January'\n$().datepicker('getMonthName', true); // 'Jan'\n$().datepicker('getMonthName', 11); // 'December'\n$().datepicker('getMonthName', 11, true); // 'Dec'\n```\n\n\n### getDayName([day[, short[, min]])\n\n- **day** (optional):\n  - Type: `Number`\n  - Default: the day of the current date\n\n- **short** (optional):\n  - Type: `Boolean`\n  - Default: `false`\n  - Get the shorter day name\n\n- **min** (optional):\n  - Type: `Boolean`\n  - Default: `false`\n  - Get the shortest day name\n\n- (return value):\n  - Type: `String`\n\nGet the day name with given argument or the current date.\n\n```js\n$().datepicker('getDayName'); // 'Sunday'\n$().datepicker('getDayName', true); // 'Sun'\n$().datepicker('getDayName', true, true); // 'Su'\n$().datepicker('getDayName', 6); // 'Saturday'\n$().datepicker('getDayName', 6, true); // 'Sat'\n$().datepicker('getDayName', 6, true, true); // 'Sa'\n```\n\n\n### getDate([formatted])\n\n- **formatted** (optional):\n  - Type: `Boolean`\n  - Default: `false`\n  - Get a formatted date string\n\n- (return value):\n  - Type: `Date` or `String`\n\nGet the current date.\n\n```js\n$().datepicker('getDate'); // date object\n$().datepicker('getDate', true); // '02/14/2014'\n```\n\n\n### setDate(date)\n\n- **date**:\n  - Type: `Date` or `String`\n\nSet the current date with a new date.\n\n```js\n$().datepicker('setDate', new Date(2014, 1, 14));\n$().datepicker('setDate', '02/14/2014');\n```\n\n\n### setStartDate(date)\n\n- **date**:\n  - Type: `Date` or `String`\n\nSet the start view date with a new date.\n\n\n### setEndDate(date)\n\n- **date**:\n  - Type: `Date` or `String`\n\nSet the end view date with a new date.\n\n\n### parseDate(date)\n\n- **date**:\n  - Type: `String`\n\nParse a date string with the set date format.\n\n```js\n$().datepicker('parseDate', '02/14/2014'); // date object\n```\n\n\n### formatDate(date)\n\n- **date**:\n  - Type: `Date`\n\nFormat a date object to a string with the set date format.\n\n```js\n$().datepicker('formatDate', new Date(2014, 1, 14)); // '02/14/2014'\n```\n\n\n### destroy()\n\nDestroy the datepicker and remove the instance from the target element.\n\n\n[⬆ back to top](#table-of-contents)\n\n\n\n## Events\n\n### show.datepicker\n\nThis event fires when starts to show the datepicker.\n\n\n### hide.datepicker\n\nThis event fires when starts to hide the datepicker.\n\n\n### pick.datepicker\n\n- **event.date**:\n  - Type: `Date`\n  - The current date\n\n- **event.view**:\n  - Type: `String`\n  - Default: `''`\n  - Options: `'year'`, `'month'`, `'day'`\n  - The current visible view\n\nThis event fires when start to pick a year, month or day.\n\n```js\n$().on('pick.datepicker', function (e) {\n  if (e.date < new Date()) {\n    e.preventDefault(); // Prevent to pick the date\n  }\n});\n```\n\n\n[⬆ back to top](#table-of-contents)\n\n\n\n## I18n\n\n### Config\n\n```js\n// datepicker.zh-CN.js\n$.fn.datepicker.languages['zh-CN'] = {\n  format: 'yyyy年mm月dd日',\n  days: ['星期日', '星期一', '星期二', '星期三', '星期四', '星期五', '星期六'],\n  daysShort: ['周日', '周一', '周二', '周三', '周四', '周五', '周六'],\n  daysMin: ['日', '一', '二', '三', '四', '五', '六'],\n  months: ['一月', '二月', '三月', '四月', '五月', '六月', '七月', '八月', '九月', '十月', '十一月', '十二月'],\n  monthsShort: ['1月', '2月', '3月', '4月', '5月', '6月', '7月', '8月', '9月', '10月', '11月', '12月'],\n  weekStart: 1,\n  startView: 0,\n  yearFirst: true,\n  yearSuffix: '年'\n};\n```\n\n### Usage\n\n```html\n<script src=\"/path/to/datepicker.js\"></script>\n<script src=\"/path/to/datepicker.zh-CN.js\"></script>\n<script>\n  $().datepicker({\n    language: 'zh-CN'\n  });\n</script>\n```\n\n\n[⬆ back to top](#table-of-contents)\n\n\n\n## No conflict\n\nIf you have to use other plugin with the same namespace, just call the `$.fn.datepicker.noConflict` method to revert to it.\n\n```html\n<script src=\"other-plugin.js\"></script>\n<script src=\"datepicker.js\"></script>\n<script>\n  $.fn.datepicker.noConflict();\n  // Code that uses other plugin's \"$().datepicker\" can follow here.\n</script>\n```\n\n\n\n## Browser support\n\n- Chrome (latest 2)\n- Firefox (latest 2)\n- Internet Explorer 8+\n- Edge (latest 2)\n- Opera (latest 2)\n- Safari (latest 2)\n\nAs a jQuery plugin, you also need to see the [jQuery Browser Support](http://jquery.com/browser-support/).\n\n\n\n## Versioning\n\nMaintained under the [Semantic Versioning guidelines](http://semver.org/).\n\n\n\n## License\n\n[MIT](http://opensource.org/licenses/MIT) © [Fengyuan Chen](http://chenfengyuan.com)\n\n\n[⬆ back to top](#table-of-contents)\n",
+  "readmeFilename": "README.md",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fengyuanchen/datepicker.git"
+  },
+  "version": "0.3.1"
+}

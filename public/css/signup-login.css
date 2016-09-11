@@ -1,0 +1,107 @@
+/* main heading tag displaying sitename.*/
+.heading{
+	font-family: 'Lobster', cursive;
+	color: #29333d;
+	font-size: 65px;
+	transition: .4s;
+}
+
+.heading:hover{
+	color: #14b0bc;
+}
+/* main heading tag displaying sitename. ---*/
+
+/* flex-cont consisting of the two forms */
+.flex-cont{
+	display: flex;
+	flex-direction: column;
+	width: 90%;
+	margin: auto;
+}
+
+/* flex-cont consisting of the two forms ---*/
+
+
+/* form styles */
+.form{
+	background-color: white;
+	padding: 10px 20px;
+	border: 1px solid lightgrey;
+	display: flex;
+	flex-direction: column;
+	max-width: 550px;
+	margin: 25px 0px;
+}
+
+
+
+.form label{
+	margin-top: 20px;
+	margin-bottom: 10px;
+}
+
+.form input{
+	padding: 5px 5px;
+	font-size: 15px;
+}
+
+
+
+.form a{
+	margin-top: 35px;
+	margin-bottom: 25px;
+}
+
+.form label img{
+	width: 20px;
+	margin-bottom: -4px;
+	margin-left: 3px;
+	cursor: pointer;
+}
+
+/* form styles ---*/
+
+
+/* OR divider styles*/
+.divider{
+	font-size: 35px;
+	text-align: center;
+	margin: 25px 0px;
+}
+
+/* OR divider styles ---*/
+
+
+
+
+/*media queries*/
+@media only screen and (min-width: 600px){
+	.form{
+		min-width: 525px;
+		margin: auto;
+	}
+
+}
+
+@media only screen and (min-width: 1100px){
+	.flex-cont{
+		flex-direction: row;
+		justify-content: center;
+	}
+
+	.form{
+		min-width: 500px;
+	}
+
+	.divider{
+		margin: auto 35px;
+	}
+
+}
+
+/*media queries ---*/
+
+
+
+
+
