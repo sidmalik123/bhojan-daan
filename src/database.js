@@ -2,7 +2,7 @@
 
 var mongoose = require('mongoose');
 
-mongoose.connect('mongodb://localhost/bhojan-daan', function(err){
+mongoose.connect(process.env.MONGOLAB_URI || 'mongodb://localhost/bhojan-daan', function(err){
 	if(err){
 		console.log('FAILED connecting to mongodb')
 	}else{
