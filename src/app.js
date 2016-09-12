@@ -191,8 +191,8 @@ app.get('/prac', function(req, res){
 })
 
 
-var port=Number(process.env.PORT || 3000);
 
-app.listen(port, function(){
+
+app.listen(process.env.PORT || 3000, function(){
 	console.log('serve running at port 3000 :)');
 })
