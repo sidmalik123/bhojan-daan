@@ -23,7 +23,7 @@ router.post('/user', function(req, res){
 					res.status(500).json({message : 'user not posted'});
 				}else{
 					req.session.userid = user._id.toString();
-					res.send({message : 'user created', id : user._id})
+					res.json({message : 'user created', id : user._id.toString()})
 				}
 			})
 		}
