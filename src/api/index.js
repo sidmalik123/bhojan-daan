@@ -17,7 +17,7 @@ router.post('/user', function(req, res){
 		if(err){
 			res.status(500).send('server error!')
 		}
-		if(!user){
+		else if(!user){
 			User.create(user, function(err, user){
 				if(err){
 					res.status(500).json({message : 'user not posted'});
@@ -26,11 +26,10 @@ router.post('/user', function(req, res){
 					res.json({message : 'user created', id : user._id.toString()})
 				}
 			})
+		}else{
+			res.status(500).send('email already used')
 		}
-
-		res.status(500).send('email already used')
 	})
-	
 })
 
 router.put('/user', function(req, res){
