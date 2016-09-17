@@ -11,19 +11,19 @@ var dateTime = require('../date.js')
 
 
 router.post('/user', function(req, res){
-	var user = (req.body);
-	var useremail = user.email;
-	User.findOne({email: useremail}, function(err,user){
+	var newUser = req.body;
+	var useremail = newUser.email;
+	User.findOne({email: useremail}, function(err,userFound){
 		if(err){
 			res.status(500).send('server error!')
 		}
-		else if(!user){
-			User.create(user, function(err, user){
+		else if(!userFound){
+			User.create(newUser, function(err, userCreated){
 				if(err){
 					res.status(500).json({message : 'user not posted'});
 				}else{
-					req.session.userid = user._id.toString();
-					res.json({message : 'user created', id : user._id.toString()})
+					req.session.userid = userCreated._id.toString();
+					res.json({message : 'user created', id : userCreated._id.toString()})
 				}
 			})
 		}else{
@@ -132,7 +132,7 @@ router.get('/logout', function(req, res){
 })
 
 router.put('/password', function(req, res){
-	var userid = mongoose.Types.ObjectId(req.query.id);
+	var userid = mongoose.Types.ObjectId(req.session.userid);
 	var currPassword = req.body.currPassword;
 	var newPassword = req.body.newPassword;
 	console.log(currPassword, newPassword, userid)
@@ -143,10 +143,13 @@ router.put('/password', function(req, res){
 			if(err){
 				res.status(500).json({message: 'cannot find user'})
 			}else{
-				if(user.password != currPassword){
+				if(user.password !== currPassword){
 					res.status(500).json({message: 'current password is not correct'})
 				}else{
-					User.findByIdAndUpdate(userid, function(err){
+					var updatedUser = {
+						'password' : newPassword
+					}
+					User.findByIdAndUpdate(userid, updatedUser, function(err){
 						if(err){
 							res.status(500).json({message : 'could not update password'})
 						}else{

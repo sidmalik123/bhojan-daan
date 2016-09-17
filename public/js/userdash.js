@@ -126,7 +126,6 @@ function toggleSettings(){
 }
 
 $('#changePassBut').on('click', function(){
-	var userid = $(this).attr('data-id');
 	var currPassword = $('#currPassword').val();
 	var newPassword = $('#newPassword').val();
 	console.log(currPassword, newPassword)
@@ -150,7 +149,7 @@ $('#changePassBut').on('click', function(){
 		}
 
 		$.ajax({
-			url : '/api/password?id='+userid,
+			url : '/api/password',
 			type: 'PUT',
 			data: JSON.stringify(pass),
 			contentType: 'application/json',
