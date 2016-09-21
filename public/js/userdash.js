@@ -67,8 +67,8 @@ $('#updateBut').on('click', function(){
 	var description = $('#userDescriptionModal').val();
 	var address = $('#userAddress').val();
 	var contact = $('#userContact').val();
-	var city = $('#userCity').text();
-	if(description.isEmpty() || address.isEmpty() || contact.isEmpty() || city == 'City'){
+	
+	if(description.isEmpty() || address.isEmpty() || contact.isEmpty()){
 		if(description.isEmpty()){
 			$('#userDescription').addClass('error-input')
 		}
@@ -82,7 +82,7 @@ $('#updateBut').on('click', function(){
 	}else{
 		var user = {
 			'description' : description,
-			'address' : address+', '+city,
+			'address' : address+', Gurgaon',
 			'contact' : contact,
 		}
 
