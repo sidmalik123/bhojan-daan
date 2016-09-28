@@ -4,7 +4,7 @@ function filterCount(count, filter){
 		return true;
 	}else if(filter =='5-10' && count<=10 && count >=5){
 		return true;
-	}else if(filter == '11-20' && count < 20 && count >=11){
+	}else if(filter == '11-20' && count <= 20 && count >=11){
 		return true;
 	}else if(filter == '> 20' && count >20){
 		return true;
